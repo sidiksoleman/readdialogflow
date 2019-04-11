@@ -7,7 +7,7 @@ if($method == 'POST'){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 	
-	$text = $json->result->queryResults->parameters->keyword;
+	$text = $json['responseId'];
 	$query = $json->result->queryResults->queryText;
 
 	switch ($text) {
