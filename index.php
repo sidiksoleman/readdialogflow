@@ -7,8 +7,8 @@ if($method == 'POST'){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 	
-	$text = $json->responseId;
-	$query = $json->result->queryResults->queryText;
+	$query = $json->queryResult->queryText;
+	$text = $json->queryResult->parameters->keyword;
 
 	switch ($text) {
 		case 'hi':
@@ -20,7 +20,7 @@ if($method == 'POST'){
 			break;
 
 		case 'chatbot':
-			$speech = "Yes, you can type anything here.";
+			$speech = "Yes, you can type anything here. We got the query";
 			break;
 		
 		default:
