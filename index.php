@@ -29,7 +29,7 @@ if($method == 'POST'){
 	}
 
 	$response = new \stdClass();
-	$response->fulfillmentText= "This is a text response"." ".$query." ".$text;
+	$response->fulfillmentText= "Ini dari server bukan Dialogflow"." User bertanya tentang: ".$query." Keywordnya adalah: ".$text;
 	echo json_encode($response);
 }
 else
