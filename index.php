@@ -29,7 +29,7 @@ if($method == 'POST'){
 	}
 
 	$response = new \stdClass();
-	$response->fulfillmentText= "This is a text response"." ".$query." ".$text
+	$response->fulfillmentText= "This is a text response"." ".$query." ".$text;
 	echo json_encode($response);
 }
 else
