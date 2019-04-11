@@ -20,7 +20,7 @@ if($method == 'POST'){
 			break;
 
 		case 'chatbot':
-			$speech = "Yes, you can type anything here. We got the query";
+			$speech = "Yes, you can type anything here. We got the query. ";
 			break;
 		
 		default:
@@ -30,7 +30,7 @@ if($method == 'POST'){
 
 	$response = new \stdClass();
 	$response->speech = $speech;
-	$response->displayText = $text;
+	$response->displayText = $query;
 	$response->source = "webhook";
 	echo json_encode($response);
 }
