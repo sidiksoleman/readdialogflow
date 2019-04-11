@@ -18,7 +18,7 @@ if($method == 'POST'){
 			$speech = "Bye, good night";
 			break;
 
-		case 'anything':
+		case 'chatbot':
 			$speech = "Yes, you can type anything here.";
 			break;
 		
